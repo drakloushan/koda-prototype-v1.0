@@ -105,9 +105,5 @@ public class PlayerScript : MonoBehaviour {
 
         return false;
     }
-
-    public void BouncePlayerWithBouncy(float force)
-    {
-
-    }
+        
 }
