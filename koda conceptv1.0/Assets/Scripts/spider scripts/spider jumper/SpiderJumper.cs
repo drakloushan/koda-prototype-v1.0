@@ -31,7 +31,7 @@ public class SpiderJumper : MonoBehaviour
 
         yield return new WaitForSeconds(.7f);
         StartCoroutine(Attack());
-
+   
     }
 
     private void OnTriggerEnter2D(Collider2D target)
