@@ -42,7 +42,7 @@ public class PlayerScript : MonoBehaviour {
     public void ApplyInput()
     {
         float xInput = Input.GetAxis("Horizontal");
-        float yInput = Input.GetAxis("Vertical");
+        bool yInput = Input.GetKeyDown(KeyCode.Space);
         //left right movement
         float xforce = xInput * moveSpeed * Time.deltaTime;
         float yForce = 0;
@@ -56,7 +56,7 @@ public class PlayerScript : MonoBehaviour {
             anim.SetBool("Walk", false);
         }
         //jumping
-        if (yInput > 0)
+        if (yInput == true)
         {
             if (IsOnTopOfCollider() && playerRigidbody.velocity.y == 0)
             {
